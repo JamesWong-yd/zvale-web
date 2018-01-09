@@ -7,8 +7,8 @@ export default new Router({
   routes: [
     {
       path: '/',
-      name: 'singerIndex',
-      component: resolve => { require(['@/components/singer/index'], resolve) }
+      name: 'singer',
+      component: resolve => { require(['@/components/singer/singer'], resolve) }
     }
   ]
 })

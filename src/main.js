@@ -10,10 +10,21 @@ Vue.use(iView)
 
 Vue.config.productionTip = false
 
+router.beforeEach((to, from, next) => {
+  iView.LoadingBar.start()
+  next()
+})
+
+router.afterEach(route => {
+  iView.LoadingBar.finish()
+})
+
 /* eslint-disable no-new */
 new Vue({
   el: '#app',
   router,
   template: '<App/>',
-  components: { App }
+  components: {
+    App
+  }
 })
