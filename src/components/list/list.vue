@@ -1,6 +1,6 @@
 <template>
   <div>
-    这是singer
+    这是list
   </div>
 </template>
 

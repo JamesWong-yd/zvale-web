@@ -1,9 +1,9 @@
 <template>
   <Row class="layout-header">
-    <Menu mode="horizontal" :theme="headerInfo.theme" :active-name="activeNav" @on-select="selectNav">
+    <Menu ref="menu" mode="horizontal" :theme="headerInfo.theme" :active-name="activeNav" @on-select="selectNav">
       <Col :xs="18" :sm="4">
       <div class="layout-logo">
-        <img :src="headerInfo.logo" alt="">
+        <img @click='backindex' :src="headerInfo.logo" alt="">
       </div>
       </Col>
       <Col :xs="0" :sm="20" class="layout-nav-right">
@@ -29,17 +29,21 @@
 
 <script>
 export default {
-  props: ['header'],
+  props: ['header', 'active'],
   data() {
     return {
       headerInfo: this.header,
-      activeNav: this.header.nav[0].path
+      activeNav: this.active
     }
   },
   created() {
     this.headerInfo.nav.sort(this.sortNav)
   },
   methods: {
+    backindex() {
+      this.$router.push('/')
+      this.$refs.menu.currentActiveName = '/'
+    },
     sortNav(a, b) {
       return a.sort - b.sort
     },
