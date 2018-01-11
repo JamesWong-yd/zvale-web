@@ -1,10 +1,8 @@
 <template>
   <div id="app">
     <!-- 头部 -->
-    <header>
-      <myheader :headerInfo="headerInfo">
-        <div slot="name">12312312312</div>
-      </myheader>
+    <header :style="'background:'+ header.bgcolor">
+      <div :is="header.type" :header="header.info"></div>
     </header>
     <!-- 内容 -->
     <main>
@@ -22,15 +20,42 @@ export default {
   name: 'app',
   data() {
     return {
-      headerInfo: {
-        title: '这是我的头部',
-        content: '这是内容',
-        footer: '这是腿部'
-      }
+      header: {
+        type: 'myheader',
+        bgcolor: '#1abc9c',
+        info: {
+          logo: './static/images/logo-min.png',
+          // dark、 light、 primary
+          theme: 'dark',
+          nav: [
+            {
+              name: '首页1',
+              path: '/',
+              sort: 1
+            },
+            {
+              name: '首页2',
+              path: '/index2',
+              sort: 22
+            },
+            {
+              name: '首页3',
+              path: '/index3',
+              sort: 3
+            },
+            {
+              name: '首页4',
+              path: '/index4',
+              sort: 12
+            }
+          ]
+        }
+      },
+      main: {}
     }
   },
   components: {
-    Myheader: resolve => {
+    myheader: resolve => {
       require(['@/main-components/myheader/myheader'], resolve)
     }
   }
@@ -44,7 +69,10 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   color: #2c3e50;
 }
-header{
-  background:#1abc9c;
+/*  */
+@media screen and (min-width: 768px) {
+  #app {
+    min-width: 1200px;
+  }
 }
 </style>

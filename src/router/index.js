@@ -1,14 +1,10 @@
 import Vue from 'vue'
 import Router from 'vue-router'
+import { routers } from './routers'
 
 Vue.use(Router)
 
 export default new Router({
-  routes: [
-    {
-      path: '/',
-      name: 'singer',
-      component: resolve => { require(['@/components/singer/singer'], resolve) }
-    }
-  ]
+  // mode: 'history',
+  routes: routers
 })
