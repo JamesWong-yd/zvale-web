@@ -36,16 +36,11 @@ export default {
       activeNav: this.active
     }
   },
-  created() {
-    this.headerInfo.nav.sort(this.sortNav)
-  },
+  created() {},
   methods: {
     backindex() {
-      this.$router.push('/')
-      this.$refs.menu.currentActiveName = '/'
-    },
-    sortNav(a, b) {
-      return a.sort - b.sort
+      this.$router.push(this.headerInfo.nav[0].path)
+      this.$refs.menu.currentActiveName = this.headerInfo.nav[0].path
     },
     selectNav(name) {
       this.$router.push(name)

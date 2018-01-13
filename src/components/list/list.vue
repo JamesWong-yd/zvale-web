@@ -7,7 +7,9 @@
 <script>
 export default {
   props: ['main'],
-  created() {}
+  created() {
+    console.log('this is list')
+  }
 }
 </script>
 
