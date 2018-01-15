@@ -1,5 +1,5 @@
 <template>
-  <div class="layout-main">
+  <div>
     <div :is="model" :main="maininfo"></div>
   </div>
 </template>
@@ -21,19 +21,18 @@ export default {
   methods: {},
   components: {
     singer: resolve => {
-      require(['@/components/singer/singer'], resolve)
+      require(['@/main-components/mymain/singer/singer'], resolve)
     },
     list: resolve => {
-      require(['@/components/list/list'], resolve)
+      require(['@/main-components/mymain/list/list'], resolve)
+    },
+    detailspage: resolve => {
+      require(['@/main-components/mymain/detailspage/detailspage'], resolve)
     }
   }
 }
 </script>
 
 <style lang="stylus" scoped>
-.layout-main {
-  width: 1200px;
-  margin: 0 auto;
-}
 </style>
 

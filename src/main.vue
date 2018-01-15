@@ -2,7 +2,7 @@
   <div>
     <!-- 头部 -->
     <header :style="{background:header.bgcolor}" :class="{headerFix:header.fixed}">
-      <div :is="header.type" :active="header.activeNav" :header="header.info"></div>
+      <div :is="header.type" :active="activeNav" :header="header.info"></div>
     </header>
     <!-- 内容 -->
     <main :class="{mainFix: header.fixed}">
@@ -20,6 +20,7 @@ export default {
   data() {
     return {
       header: {},
+      activeNav: '',
       main: {
         pagetype: 'singer',
         info: {}
@@ -28,7 +29,7 @@ export default {
   },
   created() {
     this.header = strdata.header
-    this.header.activeNav = `/${this.getStatus(this.$route.path)}`
+    this.activeNav = `/${this.getStatus(this.$route.path)}`
   },
   methods: {
     getStatus(urlStr) {
@@ -64,10 +65,11 @@ header {
 .headerFix {
   position: fixed;
   top: 0;
+  z-index: 25;
 }
 
 main {
-  min-height: 2000px;
+  min-height: 500px;
 }
 
 .mainFix {

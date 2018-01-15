@@ -1,9 +1,17 @@
+import axios from 'axios'
+
 let util = {}
 
+// 设置title
 util.title = function(title) {
-  title = title || 'zvale';
-  window.document.title = title;
+  title = title || 'zvale'
+  window.document.title = title
 };
+
+util.axios = axios.create({
+  baseURL: 'http://119.23.210.161:8081',
+  timeout: 30000
+})
 // 移除无效页面
 util.removeFalseState = function(arr) {
   let newarr = []
