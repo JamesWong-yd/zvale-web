@@ -1,29 +1,14 @@
 <template>
-  <div ref="mycarousel">
-    <Carousel v-model="info.index" :autoplay="info.autoplay" :autoplay-speed="info.autoplaySpeed" :dots="info.dots" :radius-dot="info.radiusDot" :trigger="info.trigger" :arrow="info.arrow">
-      <CarouselItem>
-        <div class="demo-carousel">1</div>
-      </CarouselItem>
-      <CarouselItem>
-        <div class="demo-carousel">2</div>
-      </CarouselItem>
-      <CarouselItem>
-        <div class="demo-carousel">3</div>
-      </CarouselItem>
-      <CarouselItem>
-        <div class="demo-carousel">4</div>
-      </CarouselItem>
-      <CarouselItem>
-        <div class="demo-carousel">4</div>
-      </CarouselItem>
-      <CarouselItem>
-        <div class="demo-carousel">4</div>
-      </CarouselItem>
-      <CarouselItem>
-        <div class="demo-carousel">4</div>
-      </CarouselItem>
-      <CarouselItem>
-        <div class="demo-carousel">4</div>
+  <div class="mycarousel">
+    <Carousel v-model="info.index"
+             :autoplay="info.autoplay"
+             :autoplay-speed="info.autoplaySpeed"
+             :dots="info.dots"
+             :radius-dot="info.radiusDot"
+             :trigger="info.trigger"
+             arrow="never">
+      <CarouselItem v-for="(item, index) in info.images" :key="index">
+        <img class="my-carouselItem-img" :src="item" width="100%" />
       </CarouselItem>
     </Carousel>
   </div>
@@ -38,9 +23,12 @@ export default {
 }
 </script>
 <style>
-.demo-carousel {
+.mycarousel {
   font-size: 50px;
   text-align: center;
+}
+.mycarousel .my-carouselItem-img{
+  width: 100%
 }
 </style>
 
