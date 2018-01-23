@@ -82,6 +82,125 @@ strdata.main = [
     margin: '0 0 0 0'
   }
 ]
+
+strdata.footer = {
+  type: 'myfooter',
+  bgcolor: '#1abc9c',
+  info: {
+
+    rlength: 6,
+    rTitle: 'Tel: +86 13662327524',
+    rDetail: 'QQ: 380928526',
+    linkRow: [
+      {
+        rowTitle: 'THIS IS ONE',
+        link: [
+          {
+            title: 'LISYFG',
+            router: './1'
+          },
+          {
+            title: 'KJAHDK',
+            router: './1'
+          },
+          {
+            title: 'DQWHDKL',
+            router: './1'
+          },
+          {
+            title: 'DQWKLJDLK',
+            router: './1'
+          }
+        ]
+      },
+      {
+        rowTitle: 'THIS IS ONE',
+        link: [
+          {
+            title: 'LISYQWEQWFG',
+            router: './1'
+          },
+          {
+            title: 'KJAQWEWEQQWEHDK',
+            router: './1'
+          },
+          {
+            title: 'DQWWQWEEWHDKL',
+            router: './1'
+          },
+          {
+            title: 'DQWKQWEWQELJDLK',
+            router: './1'
+          }
+        ]
+      },
+      {
+        rowTitle: 'THIS IS ONE',
+        link: [
+          {
+            title: 'LISEQWQWEYFG',
+            router: './1'
+          },
+          {
+            title: 'KJAQWEQWEHDK',
+            router: './1'
+          },
+          {
+            title: 'QWEEQWWEQ',
+            router: './1'
+          },
+          {
+            title: 'DQWKQWEWEQLJDLK',
+            router: './1'
+          }
+        ]
+      },
+      {
+        rowTitle: 'THIS IS ONE',
+        link: [
+          {
+            title: 'EQWQWE',
+            router: './1'
+          },
+          {
+            title: 'WEQWEQWEQ',
+            router: './1'
+          },
+          {
+            title: 'QWEQWEQWE',
+            router: './1'
+          },
+          {
+            title: 'QWEEQWQWE',
+            router: './1'
+          }
+        ]
+      },
+      {
+        rowTitle: 'THIS IS ONE',
+        link: [
+          {
+            title: 'EQWQWE',
+            router: './1'
+          },
+          {
+            title: 'WEQWEQWEQ',
+            router: './1'
+          },
+          {
+            title: 'QWEQWEQWE',
+            router: './1'
+          },
+          {
+            title: 'QWEEQWQWE',
+            router: './1'
+          }
+        ]
+      }
+    ]
+  }
+}
+
 // 移除失效结构
 strdata.header.info.nav = util.removeFalseState(strdata.header.info.nav).sort(util.sortNav)
 

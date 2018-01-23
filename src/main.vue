@@ -9,7 +9,9 @@
       <router-view :main="main"></router-view>
     </main>
     <!-- 尾部 -->
-    <footer>wqeq</footer>
+    <footer :style="{background:footer.bgcolor}">
+      <div :is="footer.type" :footer="footer.info"></div>
+    </footer>
   </div>
 </template>
 
@@ -24,11 +26,13 @@ export default {
       main: {
         pagetype: 'singer',
         info: {}
-      }
+      },
+      footer: {}
     }
   },
   created() {
     this.header = strdata.header
+    this.footer = strdata.footer
     this.activeNav = `/${this.getStatus(this.$route.path)}`
   },
   methods: {
@@ -52,6 +56,9 @@ export default {
   components: {
     myheader: resolve => {
       require(['@/main-components/myheader/myheader'], resolve)
+    },
+    myfooter: resolve => {
+      require(['@/main-components/myfooter/myfooter'], resolve)
     }
   }
 }
