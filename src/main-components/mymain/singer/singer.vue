@@ -71,10 +71,10 @@ export default {
         },
         {
           type: 'myScrollCard',
-          background: '#ccc',
+          background: '#dcf',
           padding: '50px 0',
           info: {
-            // height: '500px',
+            height: '500px',
             images: [
               {
                 url: 'sdas',
@@ -89,65 +89,29 @@ export default {
             ],
             fonts: [
               {
-                content: '',
-                size: '',
-                color: '',
-                top: '',
-                left: '',
-                sTop: '',
-                sLeft: '',
+                content: '这是文字',
+                size: '30px',
+                color: '#fff',
+                top: '20',
+                left: '20',
+                sTop: '10',
+                sLeft: '20',
+                zIndex: '5'
+              },
+              {
+                content: '这是详情撒大苏打',
+                size: '26px',
+                color: '#fff',
+                top: '40',
+                left: '20',
+                sTop: '30',
+                sLeft: '20',
                 zIndex: '5'
               }
             ],
             btns: [
               {
-                content: '',
-                size: '',
-                color: '',
-                top: '',
-                left: '',
-                sTop: '',
-                sLeft: '',
-                zIndex: '5',
-                bgcolor: '',
-                border: ''
-              }
-            ]
-          }
-        },
-        {
-          type: 'myScrollCard',
-          background: '#ede',
-          padding: '50px 0',
-          info: {
-            // height: '500px',
-            images: [
-              {
-                url: 'sdas',
-                width: '200px',
-                height: '200px',
-                left: '70%',
-                top: '20%',
-                sLeft: '80%',
-                sTop: '20%',
-                zIndex: '5'
-              }
-            ],
-            fonts: [
-              {
-                content: '',
-                size: '',
-                color: '',
-                top: '',
-                left: '',
-                sTop: '',
-                sLeft: '',
-                zIndex: '5'
-              }
-            ],
-            btns: [
-              {
-                content: '',
+                content: '这是一个按钮',
                 size: '',
                 color: '',
                 top: '',
