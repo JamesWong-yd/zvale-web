@@ -6,7 +6,6 @@
         <Col v-for="(itema, index) in footer.linkRow" :key="index" :span="rlength">
         <h3 class="my-link-title">{{itema.rowTitle}}</h3>
         <div class="my-link-span" v-for="(itemb, index) in itema.link" :key="index" :route="itemb.router">{{itemb.title}}</div>
-
         </Col>
       </Row>
       </Col>
@@ -36,7 +35,7 @@ export default {
   }
 }
 </script>
-<style lang="stylus" scoped>
+<style lang="stylus">
 .my-footer {
   max-width: 1300px;
   min-width: 1100px;
@@ -60,10 +59,16 @@ export default {
   line-height: 2;
   font-size: 16px;
   margin-bottom: 10px;
+  cursor: default;
 }
 
 .my-link-span {
   margin: 5px;
   line-height: 2;
+  cursor: pointer;
+}
+
+.my-link-span:hover {
+  color: #ddd;
 }
 </style>
