@@ -175,27 +175,6 @@ strdata.footer = {
             router: './1'
           }
         ]
-      },
-      {
-        rowTitle: 'THIS IS ONE',
-        link: [
-          {
-            title: 'EQWQWE',
-            router: './1'
-          },
-          {
-            title: 'WEQWEQWEQ',
-            router: './1'
-          },
-          {
-            title: 'QWEQWEQWE',
-            router: './1'
-          },
-          {
-            title: 'QWEEQWQWE',
-            router: './1'
-          }
-        ]
       }
     ]
   }

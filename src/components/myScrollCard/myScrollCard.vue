@@ -26,13 +26,14 @@ export default {
     window.addEventListener('scroll', this.handleScroll)
   },
   created() {
-    this.fontsInit(this.info.fonts)
-    this.btnInit(this.info.btns)
-    this.imageInit(this.info.images)
+    if (this.info.fonts) this.fontsInit(this.info.fonts)
+    if (this.info.btns) this.btnInit(this.info.btns)
+    if (this.info.images) this.imageInit(this.info.images)
   },
   methods: {
     handleScroll() {
       if (this.scrollFlag) return
+      if (!this.$refs.scardBox) return
       let scrollTop =
         document.documentElement.scrollTop || document.body.scrollTop
       if (

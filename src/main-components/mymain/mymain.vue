@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div :is="model" :main="maininfo"></div>
+    <div :is="model" :main="structureId"></div>
   </div>
 </template>
 
@@ -10,15 +10,16 @@ export default {
   data() {
     return {
       model: this.main.pagetype,
-      maininfo: this.main.info
+      structureId: this.main.structureId
     }
   },
   watch: {
     $route(to, from) {
       this.model = this.main.pagetype
+      this.structureId = this.main.structureId
+      window.scrollTo(0, 0)
     }
   },
-  methods: {},
   components: {
     singer: resolve => {
       require(['@/main-components/mymain/singer/singer'], resolve)

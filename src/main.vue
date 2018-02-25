@@ -24,8 +24,8 @@ export default {
       header: {},
       activeNav: '',
       main: {
-        pagetype: 'singer',
-        info: {}
+        pagetype: '',
+        structureId: ''
       },
       footer: {}
     }
@@ -34,23 +34,29 @@ export default {
     this.header = strdata.header
     this.footer = strdata.footer
     this.activeNav = `/${this.getStatus(this.$route.path)}`
+    // 初始进入计算当前页面的路由信息
+    this.routeJump()
   },
   methods: {
     getStatus(urlStr) {
       var urlStrArr = urlStr.split('/')
       return urlStrArr[urlStrArr.length - 1]
-    }
-  },
-  watch: {
-    $route(to, from) {
+    },
+    routeJump() {
       let path = '/' + this.getStatus(this.$route.path)
       let checkObj = this.header.info.nav
       for (const i in checkObj) {
         if (checkObj[i].path === path) {
           this.main.pagetype = checkObj[i].pagetype
+          this.main.structureId = checkObj[i].structureId
           break
         }
       }
+    }
+  },
+  watch: {
+    $route(to, from) {
+      this.routeJump()
     }
   },
   components: {

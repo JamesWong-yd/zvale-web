@@ -5,7 +5,11 @@
       <Row>
         <Col v-for="(itema, index) in footer.linkRow" :key="index" :span="rlength">
         <h3 class="my-link-title">{{itema.rowTitle}}</h3>
-        <div class="my-link-span" v-for="(itemb, index) in itema.link" :key="index" :route="itemb.router">{{itemb.title}}</div>
+        <div v-for="(itemb, index) in itema.link" :key="index">
+          <span class="my-link-span" :route="itemb.router">
+            {{itemb.title}}
+          </span>
+        </div>
         </Col>
       </Row>
       </Col>
@@ -64,7 +68,7 @@ export default {
 
 .my-link-span {
   margin: 5px;
-  line-height: 2;
+  line-height: 3;
   cursor: pointer;
 }
 

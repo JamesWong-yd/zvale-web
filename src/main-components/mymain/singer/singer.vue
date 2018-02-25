@@ -196,7 +196,6 @@ export default {
       ]
     }
   },
-  created() {},
   components: {
     myCarousel: resolve => {
       require(['@/components/myCarousel/myCarousel'], resolve)

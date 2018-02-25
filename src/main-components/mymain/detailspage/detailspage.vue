@@ -6,7 +6,7 @@
 </template>
 
 <script>
-import util from '@/libs/util'
+// import util from '@/libs/util'
 
 export default {
   props: ['main'],
@@ -20,9 +20,9 @@ export default {
   },
   watch: {
     $route(to, from) {
-      util.axios.get('/approle').then(res => {
-        console.log(res.data)
-      })
+      // util.axios.get('/approle').then(res => {
+      //   console.log(res.data)
+      // })
     }
   }
 }
