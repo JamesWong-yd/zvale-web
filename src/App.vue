@@ -18,10 +18,10 @@ export default {
   color: #2c3e50;
 }
 
-@media screen and (min-width: 768px) {
+// @media screen and (min-width: 768px) {
   #app {
     min-width: 1200px;
   }
-}
+// }
 
 </style>

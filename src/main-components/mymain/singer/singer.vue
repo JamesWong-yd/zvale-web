@@ -77,13 +77,14 @@ export default {
             height: '500px',
             images: [
               {
-                url: 'sdas',
-                width: '200px',
-                height: '200px',
-                left: '70%',
-                top: '20%',
-                sLeft: '80%',
-                sTop: '20%',
+                url:
+                  'https://static.smartisanos.cn/jianguopro2/assets/images/footprint-05.efca1637583744b412cb9906158fab68.png',
+                width: '400px',
+                height: '500px',
+                left: '70',
+                top: '10',
+                sLeft: '60',
+                sTop: '10',
                 zIndex: '5'
               }
             ],
@@ -112,15 +113,82 @@ export default {
             btns: [
               {
                 content: '这是一个按钮',
-                size: '',
-                color: '',
-                top: '',
-                left: '',
-                sTop: '',
-                sLeft: '',
+                width: '200px',
+                height: '40px',
+                size: '20px',
+                color: '#fff',
+                top: '60',
+                left: '20',
                 zIndex: '5',
-                bgcolor: '',
-                border: ''
+                bgcolor: '#ccc',
+                border: '#000',
+                sTop: '50',
+                sLeft: '20',
+                sbgcolor: '#abc',
+                sborder: '#cbd',
+                scolor: '#666'
+              }
+            ]
+          }
+        },
+        {
+          type: 'myScrollCard',
+          background: '#cfd',
+          padding: '50px 0',
+          info: {
+            height: '500px',
+            images: [
+              {
+                url:
+                  'https://static.smartisanos.cn/jianguopro2/assets/images/footprint-03.e1a3d377cea36043910c5c86cc72df26.png',
+                width: '400px',
+                height: '500px',
+                left: '10',
+                top: '10',
+                sLeft: '20',
+                sTop: '10',
+                zIndex: '5'
+              }
+            ],
+            fonts: [
+              {
+                content: '这是文字',
+                size: '30px',
+                color: '#fff',
+                top: '20',
+                left: '60',
+                sTop: '10',
+                sLeft: '60',
+                zIndex: '5'
+              },
+              {
+                content: '这是详情撒大苏打',
+                size: '26px',
+                color: '#fff',
+                top: '40',
+                left: '60',
+                sTop: '30',
+                sLeft: '70',
+                zIndex: '5'
+              }
+            ],
+            btns: [
+              {
+                content: '这是一个按钮',
+                width: '200px',
+                height: '40px',
+                size: '20px',
+                color: '#fff',
+                top: '60',
+                left: '50',
+                zIndex: '5',
+                bgcolor: '#ccc',
+                border: '#000',
+                sTop: '50',
+                sLeft: '60',
+                sbgcolor: '#abc',
+                sborder: '#cbd',
+                scolor: '#666'
               }
             ]
           }

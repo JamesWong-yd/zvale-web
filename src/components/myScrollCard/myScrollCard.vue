@@ -1,12 +1,13 @@
 <template>
   <div class="my-scard">
     <div ref="scardBox" class="my-scard-box" :style="{height:info.height}">
-      <span class="my-scard-font" v-for="(font, index) in fonts" :key="index" :style="{fontSize:font.size,color:font.color,top:`${font.top}%`,left:`${font.left}%`,zIndex: font.zIndex}">
+      <span class="my-scard-font" v-for="font in fonts" :style="font.style">
         {{ font.content }}
       </span>
-      <div class="my-scard-btn">
-        按钮
+      <div class="my-scard-btn" v-for="btn in btns" @mouseover="hoverChange($event,btn.sbgcolor,btn.sborder,btn.scolor)" @mouseout="hoverChange($event, btn.style.background,btn.style.borderColor,btn.style.color)" :style="btn.style">
+        {{ btn.content }}
       </div>
+      <img class="my-scard-img" v-for="image in images" :src="image.url" :style="image.style">
     </div>
   </div>
 </template>
@@ -16,13 +17,18 @@ export default {
   data() {
     return {
       scrollFlag: false,
-      fonts: this.info.fonts,
-      images: this.info.images,
-      btns: this.info.btns
+      fonts: [],
+      images: [],
+      btns: []
     }
   },
   mounted() {
     window.addEventListener('scroll', this.handleScroll)
+  },
+  created() {
+    this.fontsInit(this.info.fonts)
+    this.btnInit(this.info.btns)
+    this.imageInit(this.info.images)
   },
   methods: {
     handleScroll() {
@@ -35,19 +41,87 @@ export default {
         scrollTop + document.documentElement.clientHeight >=
           document.body.scrollHeight
       ) {
-        this.scrollFlag = true
         this.topLeftChange(this.fonts)
         this.topLeftChange(this.images)
         this.topLeftChange(this.btns)
+        this.scrollFlag = true
       }
     },
     topLeftChange(arr) {
       for (const key in arr) {
         if (arr[key].sTop && arr[key].sLeft) {
-          arr[key].top = arr[key].sTop
-          arr[key].left = arr[key].sLeft
+          arr[key].style.top = `${arr[key].sTop}%`
+          arr[key].style.left = `${arr[key].sLeft}%`
         }
       }
+    },
+    fontsInit(obj) {
+      let fontsLength = obj.length
+      for (let i = 0; i < fontsLength; i++) {
+        let font = {}
+        let fontObj = obj[i]
+        font.style = {
+          fontSize: fontObj.size,
+          color: fontObj.color,
+          top: `${fontObj.top}%`,
+          left: `${fontObj.left}%`,
+          zIndex: fontObj.zIndex
+        }
+        font.content = fontObj.content
+        font.sTop = fontObj.sTop
+        font.sLeft = fontObj.sLeft
+        this.fonts.push(font)
+      }
+    },
+    btnInit(obj) {
+      let btnsLength = obj.length
+      for (let i = 0; i < btnsLength; i++) {
+        let btn = {}
+        let btnObj = obj[i]
+        btn.style = {
+          width: btnObj.width,
+          height: btnObj.height,
+          lineHeight: btnObj.height,
+          fontSize: btnObj.size,
+          color: btnObj.color,
+          top: `${btnObj.top}%`,
+          left: `${btnObj.left}%`,
+          zIndex: btnObj.zIndex,
+          background: btnObj.bgcolor,
+          borderColor: btnObj.border
+        }
+        btn.content = btnObj.content
+        btn.sTop = btnObj.sTop
+        btn.sLeft = btnObj.sLeft
+        btn.sbgcolor = btnObj.sbgcolor
+        btn.sborder = btnObj.sborder
+        btn.scolor = btnObj.scolor
+        this.btns.push(btn)
+      }
+    },
+    imageInit(obj) {
+      let imagesLength = obj.length
+      for (let i = 0; i < imagesLength; i++) {
+        let image = {}
+        let imageObj = obj[i]
+        image.style = {
+          width: imageObj.width,
+          height: imageObj.height,
+          zIndex: imageObj.zIndex,
+          top: `${imageObj.top}%`,
+          left: `${imageObj.left}%`
+        }
+        image.url = imageObj.url
+        image.sLeft = imageObj.sLeft
+        image.sTop = imageObj.sTop
+        this.images.push(image)
+      }
+    },
+    hoverChange(event, sbgcolor, sborder, scolor) {
+      let that = event.currentTarget
+      that.style.background = sbgcolor
+      that.style.borderColor = sborder
+      that.style.color = scolor
     }
   }
 }
@@ -73,9 +147,20 @@ export default {
 }
 
 .my-scard-btn {
+  transition: top 2s, left 2s;
   position: absolute;
-  padding: 5px;
   border-radius: 3px;
+  text-align: center;
+  cursor: pointer;
+  border: 1px solid #212121;
+  color: #212121;
+  font-size: 18px;
+}
+
+.my-scard-img {
+  position: absolute;
+  z-index: 5;
+  transition: top 2s, left 2s;
 }
 </style>
  
