@@ -39,7 +39,7 @@ export default {
             isActive: true,
             tilteColor: '#aaa',
             detailColor: '#bbb',
-            col: 4,
+            col: 3,
             list: [
               {
                 image:
@@ -65,6 +65,19 @@ export default {
                   'https://resource.smartisan.com/resource/ce8b06c16e9f6f14d048de1e60d7f658.png?x-oss-process=image/resize,w_381/quality,Q_100',
                 title: '这是title',
                 detail: '这是的detail这是的detail这是的detail这是的detail'
+              },
+              {
+                image:
+                  'https://resource.smartisan.com/resource/3f78b9032249cbffbe813dfe1c0f03b7.jpg?x-oss-process=image/resize,w_381/quality,Q_100',
+                title: '这是title',
+                detail:
+                  '这是的detail这是的d这是的detail这是的detail这是的detail这是的detail这是的detail这是的detail这是的detail这是的detail这是的detail这是的detail这是的detail这是的detailetail这是的detail这是的detail'
+              },
+              {
+                image:
+                  'https://resource.smartisan.com/resource/ce8b06c16e9f6f14d048de1e60d7f658.png?x-oss-process=image/resize,w_381/quality,Q_100',
+                title: '这是title',
+                detail: '这是的detail这是的detail这是的detail这是的detail'
               }
             ]
           }
@@ -72,9 +85,9 @@ export default {
         {
           type: 'myScrollCard',
           background: '#dcf',
-          padding: '50px 0',
+          padding: '0',
           info: {
-            height: '500px',
+            height: '600px',
             images: [
               {
                 url:
@@ -134,9 +147,9 @@ export default {
         {
           type: 'myScrollCard',
           background: '#cfd',
-          padding: '50px 0',
+          padding: '0',
           info: {
-            height: '500px',
+            height: '600px',
             images: [
               {
                 url:
@@ -152,9 +165,9 @@ export default {
             ],
             fonts: [
               {
-                content: '这是文字',
+                content: '这是adsd文字',
                 size: '30px',
-                color: '#fff',
+                color: '#aec',
                 top: '20',
                 left: '60',
                 sTop: '10',
@@ -162,9 +175,9 @@ export default {
                 zIndex: '5'
               },
               {
-                content: '这是详情撒大苏打',
+                content: 'asdasdwqqqqqqqqqqqdqwwad',
                 size: '26px',
-                color: '#fff',
+                color: '#666',
                 top: '40',
                 left: '60',
                 sTop: '30',
@@ -182,12 +195,12 @@ export default {
                 top: '60',
                 left: '50',
                 zIndex: '5',
-                bgcolor: '#ccc',
-                border: '#000',
+                bgcolor: '#567',
+                border: '#987',
                 sTop: '50',
                 sLeft: '60',
-                sbgcolor: '#abc',
-                sborder: '#cbd',
+                sbgcolor: '#fda',
+                sborder: '#385',
                 scolor: '#666'
               }
             ]

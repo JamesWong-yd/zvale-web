@@ -68,48 +68,35 @@ strdata.header = {
   @mian 页面主题结构信息 JSONArray
 
 */
-strdata.main = [
-  {
-    moduleId: '1',
-    bgcolor: '#fff',
-    padding: '0 0 0 0',
-    margin: '0 0 0 0'
-  },
-  {
-    moduleId: '2',
-    bgcolor: '#ccc',
-    padding: '0 0 0 0',
-    margin: '0 0 0 0'
-  }
-]
 
 strdata.footer = {
   type: 'myfooter',
   bgcolor: '#1abc9c',
   info: {
-
     rlength: 6,
     rTitle: 'Tel: +86 13662327524',
     rDetail: 'QQ: 380928526',
+    company: 'Design By JAMES WONG',
+    registerNumber: '粤ICP备17022231号-4',
     linkRow: [
       {
         rowTitle: 'THIS IS ONE',
         link: [
           {
             title: 'LISYFG',
-            router: './1'
+            router: '/index3'
           },
           {
             title: 'KJAHDK',
-            router: './1'
+            router: '/1'
           },
           {
             title: 'DQWHDKL',
-            router: './1'
+            router: '/1'
           },
           {
             title: 'DQWKLJDLK',
-            router: './1'
+            router: '/1'
           }
         ]
       },
@@ -118,19 +105,19 @@ strdata.footer = {
         link: [
           {
             title: 'LISYQWEQWFG',
-            router: './1'
+            router: '/1'
           },
           {
             title: 'KJAQWEWEQQWEHDK',
-            router: './1'
+            router: '/1'
           },
           {
             title: 'DQWWQWEEWHDKL',
-            router: './1'
+            router: '/1'
           },
           {
             title: 'DQWKQWEWQELJDLK',
-            router: './1'
+            router: '/1'
           }
         ]
       },
@@ -139,19 +126,19 @@ strdata.footer = {
         link: [
           {
             title: 'LISEQWQWEYFG',
-            router: './1'
+            router: '/1'
           },
           {
             title: 'KJAQWEQWEHDK',
-            router: './1'
+            router: '/1'
           },
           {
             title: 'QWEEQWWEQ',
-            router: './1'
+            router: '/1'
           },
           {
             title: 'DQWKQWEWEQLJDLK',
-            router: './1'
+            router: '/1'
           }
         ]
       },
@@ -160,19 +147,19 @@ strdata.footer = {
         link: [
           {
             title: 'EQWQWE',
-            router: './1'
+            router: '/1'
           },
           {
             title: 'WEQWEQWEQ',
-            router: './1'
+            router: '/1'
           },
           {
             title: 'QWEQWEQWE',
-            router: './1'
+            router: '/1'
           },
           {
             title: 'QWEEQWQWE',
-            router: './1'
+            router: '/1'
           }
         ]
       }
